@@ -53,8 +53,8 @@ class DelInsExtension(markdown.extensions.Extension):
         md.inlinePatterns.add('ins', SimpleTagPattern(INS_RE, 'ins'), '<not_strong')
 
 
-def makeExtension(configs={}):
-    return DelInsExtension(configs=dict(configs))
+def makeExtension(*args, **kwargs):
+    return DelInsExtension(*args, **kwargs)
 
 
 if __name__ == "__main__":
